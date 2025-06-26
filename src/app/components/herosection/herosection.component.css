@@ -1,0 +1,184 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.hero-bg-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Base Styles */
+h1 {
+  font-family: 'Inter Tight', sans-serif;
+  color: #000;
+  letter-spacing: -0.05em; /* Using em for better responsiveness */
+  margin: 0;
+  font-size: clamp(48px, 10vw, 130px); /* Fluid typography */
+  font-weight: 400;
+  line-height: 1em;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-title-wrap {
+  grid-column: span 3;
+}
+
+.image-wrap {
+  grid-column: 4;
+}
+
+.image-wrap img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Tag Elements */
+.ui-ux-designer,
+.webflow-developer {
+  padding: 8px 12px;
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 600;
+  position: absolute;
+  border-radius: 4px;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transform-origin: center bottom;
+}
+
+.ui-ux-designer {
+  background-color: var(--secondary);
+  color: var(--black);
+  inset: auto 39% 50% auto;
+  transform: rotate(13deg);
+  animation-name: animate-ui-ux-designer;
+}
+
+.webflow-developer {
+  background-color: var(--primary);
+  color: var(--black);
+  inset: auto 30% 25% auto;
+  transform: rotate(-13deg);
+  animation-name: animate-webflow-developer;
+}
+
+/* Animations */
+@keyframes animate-ui-ux-designer {
+  0% { transform: translateY(-500px) rotate(13deg); opacity: 0; }
+  60% { transform: translateY(0) rotate(13deg); opacity: 1; }
+  75% { transform: translateY(-100px) rotate(13deg); }
+  85% { transform: translateY(0) rotate(13deg); }
+  92% { transform: translateY(-20px) rotate(13deg); }
+  100% { transform: translateY(0) rotate(13deg); }
+}
+
+@keyframes animate-webflow-developer {
+  0% { transform: translateY(-500px) rotate(-13deg); opacity: 0; }
+  60% { transform: translateY(0) rotate(-13deg); opacity: 1; }
+  75% { transform: translateY(-100px) rotate(-13deg); }
+  85% { transform: translateY(0) rotate(-13deg); }
+  92% { transform: translateY(-20px) rotate(-13deg); }
+  100% { transform: translateY(0) rotate(-13deg); }
+}
+
+/* Responsive Breakpoints */
+@media screen and (max-width: 1280px) {
+  h1 {
+    font-size: clamp(48px, 9vw, 120px);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .hero-section {
+    flex-direction: column;
+    height: auto;
+    margin-top: 100px;
+  }
+  .hero-content {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-title-wrap {
+    grid-column: span 3;
+  }
+
+  .image-wrap {
+    grid-column: span 3;
+    grid-row: 2;
+    margin-top: 20px;
+  }
+
+  .ui-ux-designer {
+    bottom: 52%;
+    right: 5%;
+    font-size: 16px;
+    display: none;
+  }
+
+  .webflow-developer {
+    right: 5%;
+    bottom: 20%;
+    font-size: 16px;
+    display: none;
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: clamp(40px, 12vw, 80px);
+    letter-spacing: -0.03em;
+  }
+
+  .ui-ux-designer,
+  .webflow-developer {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .ui-ux-designer {
+    bottom: 55%;
+    right: 2%;
+  }
+
+  .webflow-developer {
+    bottom: 25%;
+    right: 2%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: clamp(36px, 14vw, 60px);
+    letter-spacing: -0.02em;
+  }
+
+  .hero-content {
+    gap: 4px;
+  }
+
+  .ui-ux-designer,
+  .webflow-developer {
+    display: none;
+  }
+}

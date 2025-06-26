@@ -1,2 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+:root {
+  --black: #000;
+  --dark: #363636;
+  --transparent: #0000;
+  --tertiary: #aed9e0;
+  --primary: #deaaff;
+  --secondary: #fccf00;
+  --white: white;
+  --light: #f7f7f7;
+  --primary-font: "Inter Tight", sans-serif;
+}

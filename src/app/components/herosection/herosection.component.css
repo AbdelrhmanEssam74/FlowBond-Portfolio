@@ -28,6 +28,18 @@ h1 {
   line-height: 1em;
 }
 
+/* fade in h1 animation */
+/*@keyframes fadeIn {*/
+/*  from {*/
+/*    opacity: 0;*/
+/*    transform: translateY(100px);*/
+/*  }*/
+/*  to {*/
+/*    opacity: 1;*/
+/*    transform: translateY(0);*/
+/*  }*/
+/*}*/
+
 .hero-content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -47,7 +59,19 @@ h1 {
   width: 100%;
   height: auto;
   object-fit: cover;
+  /*animation: scall 0.8s ease-out;*/
 }
+
+/*@keyframes scall {*/
+/*  from {*/
+/*    transform: scale(0);*/
+/*    opacity: 0;*/
+/*  }*/
+/*  to {*/
+/*    transform: scale(1);*/
+/*    opacity: 1;*/
+/*  }*/
+/*}*/
 
 /* Tag Elements */
 .ui-ux-designer,
@@ -80,21 +104,49 @@ h1 {
 
 /* Animations */
 @keyframes animate-ui-ux-designer {
-  0% { transform: translateY(-500px) rotate(13deg); opacity: 0; }
-  60% { transform: translateY(0) rotate(13deg); opacity: 1; }
-  75% { transform: translateY(-100px) rotate(13deg); }
-  85% { transform: translateY(0) rotate(13deg); }
-  92% { transform: translateY(-20px) rotate(13deg); }
-  100% { transform: translateY(0) rotate(13deg); }
+  0% {
+    transform: translateY(-500px) rotate(13deg);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(0) rotate(13deg);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(-100px) rotate(13deg);
+  }
+  85% {
+    transform: translateY(0) rotate(13deg);
+  }
+  92% {
+    transform: translateY(-20px) rotate(13deg);
+  }
+  100% {
+    transform: translateY(0) rotate(13deg);
+  }
 }
 
 @keyframes animate-webflow-developer {
-  0% { transform: translateY(-500px) rotate(-13deg); opacity: 0; }
-  60% { transform: translateY(0) rotate(-13deg); opacity: 1; }
-  75% { transform: translateY(-100px) rotate(-13deg); }
-  85% { transform: translateY(0) rotate(-13deg); }
-  92% { transform: translateY(-20px) rotate(-13deg); }
-  100% { transform: translateY(0) rotate(-13deg); }
+  0% {
+    transform: translateY(-500px) rotate(-13deg);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(0) rotate(-13deg);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(-100px) rotate(-13deg);
+  }
+  85% {
+    transform: translateY(0) rotate(-13deg);
+  }
+  92% {
+    transform: translateY(-20px) rotate(-13deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-13deg);
+  }
 }
 
 /* Responsive Breakpoints */
@@ -110,6 +162,7 @@ h1 {
     height: auto;
     margin-top: 100px;
   }
+
   .hero-content {
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
@@ -181,4 +234,43 @@ h1 {
   .webflow-developer {
     display: none;
   }
+}
+
+.hero-bottom-wrap {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding: 0 20px;
+}
+
+
+@media screen and (max-width: 991px) {
+  .hero-details-wtap {
+    max-width: 500px;
+  }
+}
+
+.hero-details-wtap {
+  max-width: 535px;
+}
+
+.hero-details-wtap p {
+  color: var(--dark);
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 1.5em;
+}
+.email {
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  color: var(--dark);
+  text-underline-offset: 2px;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  display: flex
+;
 }

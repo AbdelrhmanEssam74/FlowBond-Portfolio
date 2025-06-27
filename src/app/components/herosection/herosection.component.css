@@ -252,8 +252,15 @@ h1 {
 
 .hero-details-wtap {
   max-width: 535px;
-}
 
+}
+@media screen and (max-width: 480px) {
+  .hero-bottom-wrap{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
 .hero-details-wtap p {
   color: var(--dark);
   margin-bottom: 0;

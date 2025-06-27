@@ -1,0 +1,98 @@
+.clients-container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  font-family: "Inter Tight", sans-serif;
+}
+
+@media screen and (max-width: 991px) {
+  .clients-header {
+    font-size: 35px;
+  }
+}
+
+.clients-header {
+  padding: 0px 20px;
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.26316em;
+  margin-bottom: 80px;
+  position: relative;
+  width: 100%;
+}
+
+
+.clients-list {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  height: 90px;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+/* Auto infinite scroll horizontal */
+@keyframes scrollLeft {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -200px;
+  }
+}
+
+.client-item {
+  position: absolute;
+  width: 200px;
+  left: 100%;
+  animation: scrollLeft 15s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-item img {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  max-height: 90px;
+  object-fit: contain;
+}
+
+/* Individual delays */
+.item1 { animation-delay: 0s; }
+.item2 { animation-delay: 2.5s; }
+.item3 { animation-delay: 5s; }
+.item4 { animation-delay: 7.5s; }
+.item5 { animation-delay: 10s; }
+.item6 { animation-delay: 12.5s; }
+
+/* Mobile view */
+@media screen and (max-width: 991px) {
+  .clients-list {
+    height: 60px;
+  }
+
+  .client-item {
+    width: 100px;
+    animation: scrollLeft 10s linear infinite;
+  }
+
+  .client-item img {
+    max-width: 100px;
+    max-height: 60px;
+  }
+
+  /* Adjusted delays for mobile */
+  .item1 { animation-delay: 0s; }
+  .item2 { animation-delay: 1.66s; }
+  .item3 { animation-delay: 3.33s; }
+  .item4 { animation-delay: 5s; }
+  .item5 { animation-delay: 6.66s; }
+  .item6 { animation-delay: 8.33s; }
+}

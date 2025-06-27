@@ -1,0 +1,14 @@
+<!-- heading -->
+<!--scroll x clients images infinite-->
+<div class="clients-container">
+  <div class="clients-header">
+    <h2> Clients</h2>
+  </div>
+  <div class="clients-list">
+    @for (client of clients; track client.index) {
+      <div class="client-item" [class]="client.index">
+        <img [src]="client.src" [alt]="client.alt"/>
+      </div>
+    }
+  </div>
+</div>

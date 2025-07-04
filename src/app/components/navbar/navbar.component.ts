@@ -1,5 +1,6 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import {Component, ElementRef, HostListener, Output, ViewChild} from '@angular/core';
 import {NgClass} from '@angular/common';
+import {AnimatedBtnComponent} from '../buttons/animated-btn/animated-btn.component';
 
 @Component({
   selector: 'app-navbar',
@@ -8,11 +9,16 @@ import {NgClass} from '@angular/common';
 
 
   imports: [
-    NgClass
+    NgClass,
+    AnimatedBtnComponent
   ]
 })
 export class NavbarComponent {
   isMobileMenuOpen = false;
+
+
+  @Output() buttonText: string = 'Contact Now';
+  @Output() buttonAfterContent: string = 'Contact Now';
 
   @ViewChild('mobileMenu') mobileMenuRef!: ElementRef;
 

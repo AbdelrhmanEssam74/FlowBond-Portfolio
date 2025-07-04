@@ -15,22 +15,17 @@
     <div class="links flex-col gap-5 items-start lg:flex lg:flex-row lg:items-center"
          #mobileMenu
          [ngClass]="isMobileMenuOpen ? 'mobile-menu-open' : 'mobile-menu-closed'">
-      <ul  (click)="closeMobileMenu()" class="flex flex-col lg:flex-row items-start lg:items-center gap-5">
+      <ul (click)="closeMobileMenu()" class="flex flex-col lg:flex-row items-start lg:items-center gap-5">
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Service</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#faq">Faq</a></li>
       </ul>
-      <div class="content-btn">
-        <a class="" href="/#contact">
-          <p>Contact Now</p>
-          <span>
-        <i class="fa-light arrow-2 fa-arrow-right-long"></i>
-        <i class="fa-light arrow-1 fa-arrow-right-long"></i>
-      </span>
-        </a>
-      </div>
+      <app-animated-btn
+        [text]=buttonText
+        [afterContent]=buttonAfterContent
+      ></app-animated-btn>
     </div>
 
 

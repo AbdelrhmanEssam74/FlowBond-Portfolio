@@ -1,0 +1,32 @@
+<div class="services-item-wrap" #servicesCardsAnimation>
+  @if (isVisible) {
+    @for (card of serviceCards; track card.id; let i = $index) {
+      <div
+        [@fadeInUpOnEnter]="{value : '' , params : {delay: i === 0 ? 0 : i*250}}"
+        [@fadeOutOnLeave]
+        [attr.data-w-id]="card.id"
+        [class]="card.class"
+        style="transform: translate3d(0px, 0vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 1;">
+        <div class="margin-bottom-60px">
+          <div class="margin-bottom-40px">
+            <img [src]="card.image" loading="lazy" alt="Services Icon" class="services-icon">
+          </div>
+          <div class="margin-bottom-12px">
+            <h4>{{ card.title }}</h4>
+          </div>
+          <p>{{ card.paragraph }}</p>
+        </div>
+        <ul role="list" class="services-list">
+          @for (item of card.listItems; track $index) {
+            <li class="services-list-item">
+              <div class="dot"></div>
+              <div>{{ item }}</div>
+            </li>
+          }
+        </ul>
+      </div>
+    } @empty {
+      <p>No services available at the moment.</p>
+    }
+  }
+</div>

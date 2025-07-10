@@ -1,30 +1,38 @@
 <div class="services-wrapper">
   <div class="services-title-wrapper">
-    <div class="margin-bottom-60px">
-      <div class="services-title-wrap" #servicesTitleAnimation>
-        @if (isVisible) {
-          <h2
-            [@fadeInUpOnEnter]
-            [@fadeOutOnLeave]
-            data-w-id="0e2bb7a3-73d6-9615-0289-157a15a15089">
-            Explore What
-            <br>
-            I Can Do For You
-          </h2>
-        }
+    <div class="margin-bottom">
+      <div class="services-title-wrap">
+        <h2
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="0"
+          data-aos-duration="700"
+          data-aos-easing="ease-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+        >
+          Explore What
+          <br>
+          I Can Do For You
+        </h2>
       </div>
     </div>
-    <div class="services-details-wrap" #servicesTitleAnimation>
-      @if (isVisible) {
+    <div class="services-details-wrap">
+      <div>
         <p
-          [@fadeInUpOnEnter]
-          [@fadeOutOnLeave]
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="700"
+          data-aos-easing="ease-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
           class="services-details-text">
           I specialize in transforming complex ideas into
           seamless, user-friendly products. My design philosophy revolves around innovation, functionality, and
           aesthetics—creating products that not only look great but also enhance usability and efficiency.
         </p>
-      }
+      </div>
     </div>
   </div>
   <app-services-card></app-services-card>

@@ -1,0 +1,31 @@
+<div class="padding-global padding-bottom-100px">
+  <div class="project-item-wrap">
+    <div class="project-item"
+         data-aos="zoom-in-up"
+         data-aos-offset="200"
+         data-aos-delay="0"
+         data-aos-duration="5000"
+         data-aos-easing="ease-out-quad"
+         data-aos-mirror="true"
+         data-aos-once="false"
+         *ngFor="let project of projects">
+      <div class="project-image-wrap">
+        <img [src]="project.image" alt="Project Image" class="project-image" loading="lazy"/>
+      </div>
+      <div class="project-content-wrap">
+        <div class="project-details-wrap">
+          <div class="project-name-wrap">
+            <h3>{{ project.title }}</h3>
+          </div>
+          <p>{{ project.description }}</p>
+        </div>
+
+        <div class="project-tag-wrap">
+          <div *ngFor="let tag of project.tags" [ngClass]="tag.class">
+            <div>{{ tag.title }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

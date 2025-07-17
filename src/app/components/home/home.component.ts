@@ -3,6 +3,7 @@ import {HerosectionComponent} from '../herosection/herosection.component';
 import {ClientsComponent} from '../clients/clients.component';
 import {CareerJourneyComponent} from '../career-journey/career-journey.component';
 import {ServicesComponent} from '../services/services.component';
+import {ProjectsComponent} from '../projects/projects.component';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,8 @@ import {ServicesComponent} from '../services/services.component';
     HerosectionComponent,
     ClientsComponent,
     CareerJourneyComponent,
-    ServicesComponent
+    ServicesComponent,
+    ProjectsComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'

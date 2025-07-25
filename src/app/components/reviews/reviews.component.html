@@ -1,0 +1,38 @@
+<section class="testimonial-section">
+  <div class="padding-global padding-bottom-100px">
+        <div class="testimonial-sticky-wrap">
+          <div class="margin-bottom-80px">
+            <div class="testimonial-title-wrap">
+              <h2>What My Clients Say About Me</h2>
+            </div>
+          </div>
+          <div class="slide-item-wrapper">
+            <div
+              *ngFor="let testimonial of testimonials ; let i = index"
+              class="testimonial-slide-item"
+              data-aos="zoom-in-up"
+              data-aos-offset="100"
+              [attr.data-aos-delay]="i * 100"
+              data-aos-duration="600"
+              data-aos-easing="ease-out"
+              data-aos-mirror="true"
+              data-aos-once="false"
+              data-aos-anchor-placement="top-center"
+            >
+              <div class="testimonial-image-wrap">
+                <img [src]="testimonial.image" alt="" />
+              </div>
+              <div class="testimonial-client-wrap">
+                <div class="client-name-wrap">
+                  <div [class]="testimonial.client_name_class">{{ testimonial.clientName }}</div>
+                  <div>{{ testimonial.clientTitle }}</div>
+                </div>
+                <div class="testimonial-comment">
+                  {{ testimonial.comment }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+</section>

@@ -5,6 +5,7 @@ import {CareerJourneyComponent} from '../career-journey/career-journey.component
 import {ServicesComponent} from '../services/services.component';
 import {ProjectsComponent} from '../projects/projects.component';
 import {ReviewsComponent} from '../reviews/reviews.component';
+import {FaqComponent} from '../faq/faq.component';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,8 @@ import {ReviewsComponent} from '../reviews/reviews.component';
     CareerJourneyComponent,
     ServicesComponent,
     ProjectsComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    FaqComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'

@@ -4,6 +4,7 @@ import {ClientsComponent} from '../clients/clients.component';
 import {CareerJourneyComponent} from '../career-journey/career-journey.component';
 import {ServicesComponent} from '../services/services.component';
 import {ProjectsComponent} from '../projects/projects.component';
+import {ReviewsComponent} from '../reviews/reviews.component';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,8 @@ import {ProjectsComponent} from '../projects/projects.component';
     ClientsComponent,
     CareerJourneyComponent,
     ServicesComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ReviewsComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'

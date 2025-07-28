@@ -167,11 +167,17 @@ p {
 
 .question {
   white-space: normal;
-  font-size: 24px;
   font-weight: 500;
   line-height: 1.18em;
 }
-
+h4 {
+  color: var(--black);
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.2em;
+}
 @media screen and (max-width: 767px) {
   h4 {
     font-size: 26px;
@@ -184,14 +190,6 @@ p {
   }
 }
 
-h4 {
-  color: var(--black);
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 38px;
-  font-weight: 500;
-  line-height: 1.2em;
-}
 
 .arrow-icon-wrap {
   flex: none;
@@ -227,10 +225,11 @@ h4 {
 
 .w-dropdown-list {
   background: #ddd;
-  min-width: 100%;
-  display: none;
-  position: absolute;
+  width: 100%;
+  position: relative;
+  transition: all 0.3s ease;
 }
+
 
 @media screen and (max-width: 767px) {
   .faq-answer-block {
@@ -253,4 +252,31 @@ p {
   margin-bottom: 0;
   font-size: 18px;
   line-height: 1.5em;
+}
+
+
+.faq-answer-block.show {
+  max-height: 250px;
+  opacity: 1;
+}
+
+.faq-answer-block.hide {
+  max-height: 0;
+  opacity: 0;
+}
+.faq-answer-block {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 1s ease, opacity 1s ease;
+  padding-left: 20px;
+}
+
+.faq-arrow-two {
+  transition: transform 0.9s ease;
+}
+
+
+.faq-arrow-two.rotate {
+  transform: translate(-50%, -50%) rotate(90deg);
 }

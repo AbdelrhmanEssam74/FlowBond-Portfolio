@@ -1,6 +1,14 @@
-<section class="faq-wrapper">
+<section class="faq-wrapper" id="faq">
   <div class="margin-bottom-60px"></div>
-  <div class="faq-title-wrapper">
+  <div class="faq-title-wrapper"
+       data-aos="slide-up"
+       data-aos-offset="100"
+       data-aos-duration="600"
+       data-aos-easing="ease-in-out"
+       data-aos-mirror="true"
+       data-aos-once="false"
+       data-aos-anchor-placement="top-center"
+  >
     <div class="faq-title-wrap">
       <h2>Asked Questions?</h2>
       <p>
@@ -10,7 +18,16 @@
     </div>
   </div>
 
-  <div class="faq-item-wrap">
+  <div class="faq-item-wrap"
+       data-aos="slide-up"
+       data-aos-offset="100"
+       data-aos-duration="600"
+       data-aos-delay="50"
+       data-aos-easing="ease-in-out"
+       data-aos-mirror="true"
+       data-aos-once="false"
+       data-aos-anchor-placement="top-center"
+  >
     <div class="faq-item w-dropdown" *ngFor="let faq of fqaData; let i = index">
       <div class="question-block w-dropdown-toggle" #toggleButton (click)="toggleFaq(i)">
         <h4 class="question">{{ faq.question }}</h4>

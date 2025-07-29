@@ -1,96 +1,54 @@
-<section class="faq-wrapper">
+<section class="faq-wrapper" id="faq">
   <div class="margin-bottom-60px"></div>
-  <div class="faq-title-wrapper">
+  <div class="faq-title-wrapper"
+       data-aos="slide-up"
+       data-aos-offset="100"
+       data-aos-duration="600"
+       data-aos-easing="ease-in-out"
+       data-aos-mirror="true"
+       data-aos-once="false"
+       data-aos-anchor-placement="top-center"
+  >
     <div class="faq-title-wrap">
-      <h2>
-        Asked Questions?
-      </h2>
+      <h2>Asked Questions?</h2>
       <p>
         Have questions? We’ve answers. If you can’t find what we are looking for, feel free to get in touch. James Bond
         is a best portfolio & agency website, you can easily use.
       </p>
     </div>
   </div>
-  <div  class="faq-item-wrap">
-    <div class="faq-item w-dropdown">
-      <div class="question-block w-dropdown-toggle" ><h4 class="question" style="">
-        What services do you offer?</h4>
-        <div class="arrow-icon-wrap" style="">
-          <div class="faq-arrow" style=""></div>
-          <div class="faq-arrow-two" style="opacity: 1;"></div>
+
+  <div class="faq-item-wrap"
+       data-aos="slide-up"
+       data-aos-offset="100"
+       data-aos-duration="600"
+       data-aos-delay="50"
+       data-aos-easing="ease-in-out"
+       data-aos-mirror="true"
+       data-aos-once="false"
+       data-aos-anchor-placement="top-center"
+  >
+    <div class="faq-item w-dropdown" *ngFor="let faq of fqaData; let i = index">
+      <div class="question-block w-dropdown-toggle" #toggleButton (click)="toggleFaq(i)">
+        <h4 class="question">{{ faq.question }}</h4>
+        <div class="arrow-icon-wrap">
+          <div class="faq-arrow"></div>
+          <div class="faq-arrow-two"
+               [class.rotate]="faq.visible"
+               style="opacity: 1;"></div>
+
         </div>
       </div>
-      <nav class="faq-answer-block w-dropdown-list" style="height: 0px;" id="w-dropdown-list-0"
-           aria-labelledby="w-dropdown-toggle-0">
-        <div class="faq-answer" style=""><p style="">When you first start reading, it takes a second to realize his wife
-          has passed away. I thought this was so well done, &nbsp;because at first he’s talking to her all the time</p>
-        </div>
-      </nav>
-    </div>
-    <div data-delay="0" data-hover="false" class="faq-item w-dropdown" style="">
-      <div class="question-block w-dropdown-toggle" id="w-dropdown-toggle-1" aria-controls="w-dropdown-list-1"
-           aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0" style=""><h4 class="question" style="">
-        How many revisions do I get?</h4>
-        <div class="arrow-icon-wrap" style="">
-          <div class="faq-arrow" style=""></div>
-          <div class="faq-arrow-two" style="opacity: 1;"></div>
-        </div>
-      </div>
-      <nav class="faq-answer-block w-dropdown-list" style="height: 0px;" id="w-dropdown-list-1"
-           aria-labelledby="w-dropdown-toggle-1">
-        <div class="faq-answer" style=""><p style="">When you first start reading, it takes a second to realize his wife
-          has passed away. I thought this was so well done, &nbsp;because at first he’s talking to her all the time</p>
-        </div>
-      </nav>
-    </div>
-    <div data-delay="0" data-hover="false" class="faq-item w-dropdown" style="">
-      <div class="question-block w-dropdown-toggle" id="w-dropdown-toggle-2" aria-controls="w-dropdown-list-2"
-           aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0" style=""><h4 class="question" style="">
-        How do I get started with a design project?</h4>
-        <div class="arrow-icon-wrap" style="">
-          <div class="faq-arrow" style=""></div>
-          <div class="faq-arrow-two" style="opacity: 1;"></div>
-        </div>
-      </div>
-      <nav class="faq-answer-block w-dropdown-list" style="height: 0px;" id="w-dropdown-list-2"
-           aria-labelledby="w-dropdown-toggle-2">
-        <div class="faq-answer" style=""><p style="">When you first start reading, it takes a second to realize his wife
-          has passed away. I thought this was so well done, &nbsp;because at first he’s talking to her all the time</p>
-        </div>
-      </nav>
-    </div>
-    <div data-delay="0" data-hover="false" class="faq-item w-dropdown" style="">
-      <div class="question-block w-dropdown-toggle" id="w-dropdown-toggle-3" aria-controls="w-dropdown-list-3"
-           aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0" style=""><h4 class="question" style="">
-        How long does a design project take?</h4>
-        <div class="arrow-icon-wrap" style="">
-          <div class="faq-arrow" style=""></div>
-          <div class="faq-arrow-two" style="opacity: 1;"></div>
-        </div>
-      </div>
-      <nav class="faq-answer-block w-dropdown-list" style="height: 0px;" id="w-dropdown-list-3"
-           aria-labelledby="w-dropdown-toggle-3">
-        <div class="faq-answer" style=""><p style="">When you first start reading, it takes a second to realize his wife
-          has passed away. I thought this was so well done, &nbsp;because at first he’s talking to her all the time</p>
-        </div>
-      </nav>
-    </div>
-    <div data-delay="0" data-hover="false" class="faq-item w-dropdown" style="">
-      <div class="question-block w-dropdown-toggle" id="w-dropdown-toggle-4" aria-controls="w-dropdown-list-4"
-           aria-haspopup="menu" aria-expanded="false" role="button" tabindex="0" style=""><h4 class="question" style="">
-        How much do your design services cost?</h4>
-        <div class="arrow-icon-wrap" style="">
-          <div class="faq-arrow" style=""></div>
-          <div class="faq-arrow-two" style="opacity: 1;"></div>
-        </div>
-      </div>
-      <nav class="faq-answer-block w-dropdown-list" style="height: 0px;" id="w-dropdown-list-4"
-           aria-labelledby="w-dropdown-toggle-4">
-        <div class="faq-answer" style=""><p style="">When you first start reading, it takes a second to realize his wife
-          has passed away. I thought this was so well done, &nbsp;because at first he’s talking to her all the time</p>
+
+      <nav
+        class="faq-answer-block w-dropdown-list"
+        [class.show]="faq.visible"
+        [class.hide]="!faq.visible"
+      >
+        <div class="faq-answer">
+          <p [innerHTML]="faq.answer"></p>
         </div>
       </nav>
     </div>
   </div>
 </section>
-

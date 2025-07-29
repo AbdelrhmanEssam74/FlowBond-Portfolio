@@ -6,6 +6,7 @@ import {ServicesComponent} from '../services/services.component';
 import {ProjectsComponent} from '../projects/projects.component';
 import {ReviewsComponent} from '../reviews/reviews.component';
 import {FaqComponent} from '../faq/faq.component';
+import {ContactComponent} from '../contact/contact.component';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,8 @@ import {FaqComponent} from '../faq/faq.component';
     ServicesComponent,
     ProjectsComponent,
     ReviewsComponent,
-    FaqComponent
+    FaqComponent,
+    ContactComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'

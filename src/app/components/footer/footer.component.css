@@ -48,6 +48,7 @@
 }
 
 .portfolio-item {
+  font-family: "Inter Tight", sans-serif;
   display: flex;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
@@ -70,7 +71,7 @@
 }
 
 .portfolio-item:hover  div{
-  color: var(--white);
+  color: #000;
   text-decoration: underline;
 }
 .portfolio-item:hover i {
@@ -88,6 +89,7 @@
   line-height: 1em;
 }
 h2 {
+  font-family: "Inter Tight", sans-serif;
   color: var(--black);
   letter-spacing: -4px;
   margin-top: 0;
@@ -108,11 +110,27 @@ h2 {
 }
 
 .copywrite-text {
+  font-family: "Inter Tight", sans-serif;
   color: var(--dark);
   text-align: left;
   font-size: 18px;
   font-weight: 600;
   line-height: 1.5em;
+}
+.my-links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.my-links .my-link{
+  color: var(--dark);
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+.my-links .my-link:hover {
+  color: #000;
 }
 @media (max-width: 768px) {
   .portfolio-item-wrap {

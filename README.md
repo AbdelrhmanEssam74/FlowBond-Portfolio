@@ -1,59 +1,91 @@
-# FlowBondPortfolio
+# 🌐 Flow Bond Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
+A sleek, modern, and responsive **portfolio website** built with **Angular**, using a template exported from **Webflow**.  
+It showcases personal projects, skills, and contact information with a clean UI and smooth navigation.
 
-## Development server
+## 🔗 Live Demo
 
-To start a local development server, run:
+👉 [Click here to view the live site](https://flow-bond-portfolio.vercel.app/)
+
+---
+
+## 📌 Features
+
+- ✅ Responsive design from Webflow
+- ✅ Component-based Angular structure
+- ✅ Smooth scrolling navigation
+- ✅ About, Projects, and Contact sections
+- ✅ Deployed with Vercel
+
+---
+
+## ⚙️ Tech Stack
+
+| Layer      | Technology                |
+|------------|---------------------------|
+| Frontend   | [Angular](https://angular.io/) |
+| Styling    | Webflow-exported HTML/CSS |
+| Deployment | [Vercel](https://vercel.com/)  |
+
+---
+
+## 📁 Folder Structure
 
 ```bash
+flow-bond-portfolio/
+├── src/
+│   ├── app/
+│   │   ├── components/        # Reusable UI components
+│   │   ├── pages/             # Home, About, Projects, Contact
+│   │   ├── services/          # Shared services (if any)
+│   │   └── app.module.ts      # Root module
+│   ├── assets/                # Images, fonts, icons
+│   └── index.html             # Main HTML file
+├── angular.json               # Angular config
+├── package.json               # Project metadata and scripts
+├── tsconfig.json              # TypeScript configuration
+└── README.md                  # Documentation
+```
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to run the project locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/AbdelrhmanEssam74/FlowBond-Portfolio.git
+
+# Navigate into the project directory
+cd flow-bond-portfolio
+
+# Install dependencies
+npm install
+
+# Run the development server
 ng serve
+
+Then open your browser and go to:
+http://localhost:4200
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## ✍️ Author
 
-## Code scaffolding
+**Abdelrahman**  
+Full Stack Developer (Angular & Laravel)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- 🌐 [Live Portfolio](https://flow-bond-portfolio.vercel.app/)
+- 💼 [LinkedIn](www.linkedin.com/in/abdelrhmanessam74)
+- 🐙 [GitHub](https://github.com/AbdelrhmanEssam74)
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🙏 Acknowledgements
 
-```bash
-ng generate --help
-```
+- [Webflow](https://flowbond.webflow.io/) – For the original UI design  
+- [Angular](https://angular.io/) – Development framework  
+- [Vercel](https://vercel.com/) – Deployment platform
 
-## Building
 
-To build the project run:
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

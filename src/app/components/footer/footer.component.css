@@ -1,0 +1,153 @@
+.footer-section {
+  background-color: var(--tertiary);
+  padding-top: 100px;
+  padding-bottom: 10px;
+}
+
+.padding-global {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.w-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.w-layout-blockcontainer {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1720px;
+}
+
+.footer-wrapper {
+  max-width: 1627px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolio-item-wrap {
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1060px;
+  margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.w-inline-block {
+  max-width: 100%;
+  display: inline-block;
+}
+
+.portfolio-item {
+  display: flex;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  color: var(--dark);
+  text-underline-offset: 4px;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.portfolio-item div {
+  transition: 0.2s ease-in-out;
+}
+.portfolio-item i{
+  font-size: 24px;
+  margin-right: 10px;
+  color: var(--dark);
+  transition: 0.2s ease-in-out;
+}
+
+.portfolio-item:hover  div{
+  color: var(--white);
+  text-decoration: underline;
+}
+.portfolio-item:hover i {
+  transform: translateY(-10px);
+}
+.footer-span-text-wrap {
+  text-decoration: none;
+}
+
+.footer-text-wrap {
+  margin-bottom: 40px;
+}
+.footer-span-text {
+  font-size: 22.5vw;
+  line-height: 1em;
+}
+h2 {
+  color: var(--black);
+  letter-spacing: -4px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 1em;
+}
+
+.copywrite-wrap {
+  text-align: center;
+  border-top: 1px solid #0003;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+}
+
+.copywrite-text {
+  color: var(--dark);
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5em;
+}
+@media (max-width: 768px) {
+  .portfolio-item-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 20px;
+  }
+
+  .portfolio-item {
+    font-size: 20px;
+    justify-content: flex-start;
+  }
+
+  .footer-text-wrap {
+    margin-bottom: 20px;
+  }
+
+  .footer-span-text {
+    font-size: 12vw;
+  }
+
+  h2 {
+    letter-spacing: -1px;
+    text-align: center;
+  }
+
+  .copywrite-wrap {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .copywrite-text {
+    font-size: 16px;
+    text-align: center;
+  }
+}

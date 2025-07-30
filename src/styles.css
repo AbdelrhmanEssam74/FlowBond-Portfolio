@@ -11,3 +11,6 @@
   --light: #f7f7f7;
   --primary-font: "Inter Tight", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}

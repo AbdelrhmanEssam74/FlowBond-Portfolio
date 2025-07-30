@@ -7,6 +7,7 @@ import {ProjectsComponent} from '../projects/projects.component';
 import {ReviewsComponent} from '../reviews/reviews.component';
 import {FaqComponent} from '../faq/faq.component';
 import {ContactComponent} from '../contact/contact.component';
+import {FooterComponent} from '../footer/footer.component';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,8 @@ import {ContactComponent} from '../contact/contact.component';
     ProjectsComponent,
     ReviewsComponent,
     FaqComponent,
-    ContactComponent
+    ContactComponent,
+    FooterComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
